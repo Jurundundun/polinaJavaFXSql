@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="123.0" prefWidth="470.0"
+      xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.polinajavafxsql.TeacherTimetableDateController">
+    <children>
+        <Button fx:id="button" layoutX="179.0" layoutY="87.0" mnemonicParsing="false" onAction="#get" prefHeight="22.0" prefWidth="113.0" text="Получить" />
+        <Label layoutX="27.0" layoutY="47.0" prefHeight="31.0" prefWidth="113.0" text="Дата" />
+        <TextField fx:id="data" layoutX="99.0" layoutY="52.0" prefHeight="22.0" prefWidth="324.0" />
+    </children>
+</Pane>

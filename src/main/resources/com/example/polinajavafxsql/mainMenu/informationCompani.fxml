@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="406.0" prefWidth="829.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.polinajavafxsql.CompaniInformationController">
+   <children>
+      <TableView fx:id="infoTableView" layoutX="-1.0" prefHeight="406.0" prefWidth="878.0">
+         <columns>
+            <TableColumn fx:id="id" prefWidth="108.0" text="Код_организации" />
+            <TableColumn fx:id="name" prefWidth="170.0" text="Наименование_учреждения" />
+            <TableColumn fx:id="lawAddress" prefWidth="132.0" text="Юридический_Адрес" />
+            <TableColumn fx:id="actualAddress" minWidth="0.0" prefWidth="124.0" text="Фактический_Адрес" />
+            <TableColumn fx:id="phoneNumber" prefWidth="78.0" text="Телефон" />
+            <TableColumn fx:id="email" minWidth="0.0" prefWidth="139.0" text="Электронная_почта" />
+            <TableColumn fx:id="fioDirector" minWidth="8.0" prefWidth="126.0" text="ФИО_Директора" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

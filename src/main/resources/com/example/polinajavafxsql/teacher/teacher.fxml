@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="339.0" prefWidth="290.0"
+      xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.polinajavafxsql.MenuTeacherController">
+   <children>
+      <Label layoutX="19.0" prefHeight="40.0" prefWidth="253.0" text="Преподаватель">
+         <font>
+            <Font name="Arial" size="33.0" />
+         </font>
+      </Label>
+      <Button fx:id="qualification" layoutX="19.0" layoutY="43.0" mnemonicParsing="false" onAction="#training" prefHeight="40.0" prefWidth="253.0" text="Повышение квалификации">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="employment" layoutX="19.0" layoutY="98.0" mnemonicParsing="false" onAction="#employmentReport" prefHeight="40.0" prefWidth="253.0" text="Отчет о занятости">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="client" layoutX="18.0" layoutY="160.0" mnemonicParsing="false" onAction="#clientInformation" prefHeight="40.0" prefWidth="253.0" text="Информация о клиенте">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="services" layoutX="18.0" layoutY="220.0" mnemonicParsing="false" onAction="#servicesClient" prefHeight="40.0" prefWidth="253.0" text="Услуги клиента">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="data" layoutX="19.0" layoutY="279.0" mnemonicParsing="false" onAction="#dateForm" prefHeight="40.0" prefWidth="253.0" text="График на дату">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+   </children>
+</Pane>

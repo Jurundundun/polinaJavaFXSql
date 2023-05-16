@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="428.0" prefWidth="306.0"
+      xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.polinajavafxsql.MenuAdministratorController">
+   <children>
+      <Label layoutX="49.0" prefHeight="35.0" prefWidth="235.0" text="Администратор">
+         <font>
+            <Font name="Arial" size="29.0" />
+         </font>
+      </Label>
+      <Button fx:id="listOfClient" layoutX="14.0" layoutY="62.0" mnemonicParsing="false" onAction="#getListOfClietn" prefHeight="22.0" prefWidth="278.0" text="Список клиентов" />
+      <Button fx:id="registration" layoutX="14.0" layoutY="35.0" mnemonicParsing="false" onAction="#getFormOfRegistration" prefHeight="22.0" prefWidth="278.0" text="Регистрация клиента" />
+      <Button fx:id="contracts" layoutX="14.0" layoutY="91.0" mnemonicParsing="false" onAction="#getListOfContracts" prefHeight="22.0" prefWidth="278.0" text="Заключенные договоры" />
+      <Button fx:id="contractForm" layoutX="14.0" layoutY="121.0" mnemonicParsing="false" onAction="#getFormOFContract" prefHeight="22.0" prefWidth="278.0" text="Заключить договор" />
+      <Button fx:id="receiptForm" layoutX="14.0" layoutY="150.0" mnemonicParsing="false" onAction="#getFormOfRecipt" prefHeight="22.0" prefWidth="278.0" text="Оформить квитанцию" />
+      <Button fx:id="receiptList" layoutX="14.0" layoutY="178.0" mnemonicParsing="false" onAction="#getReciptList" prefHeight="22.0" prefWidth="278.0" text="Квитанции" />
+      <Button fx:id="timetableForm" layoutX="14.0" layoutY="209.0" mnemonicParsing="false" onAction="#getTimetableForm" prefHeight="22.0" prefWidth="278.0" text="Составить расписание" />
+      <Button fx:id="searchTeacherForm" layoutX="14.0" layoutY="240.0" mnemonicParsing="false" onAction="#getSearchForm" prefHeight="22.0" prefWidth="278.0" text="Поиск преподавателя" />
+      <Button fx:id="services" layoutX="14.0" layoutY="272.0" mnemonicParsing="false" onAction="#getServicesOfClient" prefHeight="22.0" prefWidth="278.0" text="Услуги клиента" />
+      <Button fx:id="childs" layoutX="14.0" layoutY="305.0" mnemonicParsing="false" onAction="#getListOfChilds" prefHeight="22.0" prefWidth="278.0" text="Дети младшей школы" />
+      <Button fx:id="contractYear" layoutX="14.0" layoutY="334.0" mnemonicParsing="false" onAction="#getContractsThisYear" prefHeight="22.0" prefWidth="278.0" text="Договора этого года" />
+      <Button fx:id="numberOfstudents" layoutX="14.0" layoutY="364.0" mnemonicParsing="false" onAction="#getListOfStudents" prefHeight="22.0" prefWidth="278.0" text="Количество учеников" />
+      <Button fx:id="timetableOfDate" layoutX="14.0" layoutY="392.0" mnemonicParsing="false" onAction="#getFormOfDate" prefHeight="22.0" prefWidth="278.0" text="Расписание на дату" />
+   </children>
+</Pane>

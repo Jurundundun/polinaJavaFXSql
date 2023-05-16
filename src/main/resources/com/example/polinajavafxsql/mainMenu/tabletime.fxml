@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="597.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.polinajavafxsql.TabletimeController">
+   <children>
+      <TableView fx:id="tabletimeTableView" layoutX="-1.0" prefHeight="406.0" prefWidth="597.0">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="89.0" text="Код_строки" />
+          <TableColumn fx:id="data" prefWidth="71.0" text="Дата" />
+            <TableColumn fx:id="dayOfTheWeek" prefWidth="94.0" text="День_недели" />
+            <TableColumn fx:id="time" prefWidth="64.0" text="Время" />
+            <TableColumn fx:id="idOrganization" prefWidth="143.0" text="Код_организации" />
+            <TableColumn fx:id="idService" prefWidth="135.0" text="Код_услуг" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
