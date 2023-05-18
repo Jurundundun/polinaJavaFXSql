@@ -5,8 +5,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="665.0" prefWidth="423.0"
-      xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.polinajavafxsql.MenuDirectorController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="548.0" prefWidth="423.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.polinajavafxsql.MenuDirectorController">
    <children>
       <Label layoutX="147.0" layoutY="14.0" prefHeight="41.0" prefWidth="323.0" text="Директор">
          <font>
@@ -32,7 +31,6 @@
       <Button fx:id="numberOfStudents" layoutX="35.0" layoutY="417.0" mnemonicParsing="false" onAction="#getNumberOfStudents" prefHeight="22.0" prefWidth="353.0" text="Количество учеников" />
       <Button fx:id="serviceByCondition" layoutX="35.0" layoutY="448.0" mnemonicParsing="false" onAction="#getServiceByCondition" prefHeight="22.0" prefWidth="353.0" text="Услуги, стоимость которых выше определенного значения" />
       <Button fx:id="timetableOfDate" layoutX="35.0" layoutY="476.0" mnemonicParsing="false" onAction="#getFormOfDate" prefHeight="22.0" prefWidth="353.0" text="Расписание на  дату" />
-      <Button fx:id="timetableOfEmploye" layoutX="35.0" layoutY="505.0" mnemonicParsing="false" onAction="#getTimetableOfEmploye" prefHeight="22.0" prefWidth="353.0" text="График сотрудника на дату" />
-      <Button fx:id="numberOfclasses" layoutX="35.0" layoutY="535.0" mnemonicParsing="false" onAction="#getNumberOfclasses" prefHeight="22.0" prefWidth="353.0" text="Количество занятий за период" />
+      <Button fx:id="numberOfclasses" layoutX="35.0" layoutY="507.0" mnemonicParsing="false" onAction="#getNumberOfclasses" prefHeight="22.0" prefWidth="353.0" text="Количество занятий за период" />
    </children>
 </Pane>

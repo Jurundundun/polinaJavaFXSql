@@ -20,6 +20,9 @@ public class AdministratorEmployeController implements Initializable {
     private TableColumn<Employee, LocalDate> birthDate;
 
     @FXML
+    private TableColumn<Employee, LocalDate> data;
+
+    @FXML
     private TableColumn<Employee, String> email;
 
     @FXML
@@ -35,13 +38,25 @@ public class AdministratorEmployeController implements Initializable {
     private TableColumn<Employee, Integer> id;
 
     @FXML
-    private TableColumn<Employee, Integer> idOrganization;
+    private TableColumn<Employee, Integer> idSubdivision;
 
     @FXML
-    private TableColumn<Employee, Integer> idPosition;
+    private TableColumn<Employee, String> issuedBy;
+
+    @FXML
+    private TableColumn<Employee, String> nameOfCourse;
+
+    @FXML
+    private TableColumn<Employee, String> pasportNumber;
+
+    @FXML
+    private TableColumn<Employee, String> passportSeries;
 
     @FXML
     private TableColumn<Employee, String> phoneNumber;
+
+    @FXML
+    private TableColumn<Employee, LocalDate> whenIssued;
 
     private Connection connection;
     private static int pass;
@@ -59,16 +74,22 @@ public class AdministratorEmployeController implements Initializable {
         fio.setCellValueFactory(new PropertyValueFactory<>("fio"));
         gen.setCellValueFactory(new PropertyValueFactory<>("gen"));
         id.setCellValueFactory(new PropertyValueFactory<>("id"));
-        idOrganization.setCellValueFactory(new PropertyValueFactory<>("idOrganization"));
-        idPosition.setCellValueFactory(new PropertyValueFactory<>("idPosition"));
         phoneNumber.setCellValueFactory(new PropertyValueFactory<>("phoneNumber"));
+        whenIssued.setCellValueFactory(new PropertyValueFactory<>("whenIssued"));
+        passportSeries.setCellValueFactory(new PropertyValueFactory<>("passportSeries"));
+        pasportNumber.setCellValueFactory(new PropertyValueFactory<>("pasportNumber"));
+        nameOfCourse.setCellValueFactory(new PropertyValueFactory<>("nameOfCourse"));
+        issuedBy.setCellValueFactory(new PropertyValueFactory<>("issuedBy"));
+        idSubdivision.setCellValueFactory(new PropertyValueFactory<>("idSubdivision"));
+        data.setCellValueFactory(new PropertyValueFactory<>("data"));
+
 
 
         connection = ConnectionDb.connectingToDatabase();
         if(pass == 1){
             pass = 0;
         }else {
-            employeesList = DataEntityFromDb.getEmployeeFromDb(connection);
+            employeesList = DataEntityFromDb.getInfoEmployeeFromDb(connection);
         }
         employeeTable.setItems(employeesList);
     }

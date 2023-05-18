@@ -5,12 +5,11 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.Pane?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="256.0" prefWidth="524.0"
-      xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.polinajavafxsql.AdministratorClientFormController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="407.0" prefWidth="524.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.polinajavafxsql.AdministratorClientFormController">
     <children>
         <Label layoutX="14.0" layoutY="20.0" prefHeight="31.0" prefWidth="113.0" text="Код_клиента" />
         <TextField fx:id="id" layoutX="179.0" layoutY="26.0" prefHeight="22.0" prefWidth="324.0" />
-        <Button fx:id="button" layoutX="179.0" layoutY="212.0" mnemonicParsing="false" onAction="#send" prefHeight="22.0" prefWidth="113.0" text="Отправить" />
+        <Button fx:id="button" layoutX="179.0" layoutY="362.0" mnemonicParsing="false" onAction="#send" prefHeight="22.0" prefWidth="113.0" text="Отправить" />
         <Label layoutX="14.0" layoutY="139.0" prefHeight="31.0" prefWidth="119.0" text="Телефон" />
         <Label layoutX="14.0" layoutY="81.0" prefHeight="31.0" prefWidth="172.0" text="ФИО_законного_представителя" />
         <Label layoutX="14.0" layoutY="51.0" prefHeight="31.0" prefWidth="113.0" text="ФИО_ребенка" />
@@ -21,5 +20,15 @@
         <TextField fx:id="phoneNumber" layoutX="179.0" layoutY="145.0" prefHeight="22.0" prefWidth="324.0" />
       <TextField fx:id="email" layoutX="179.0" layoutY="171.0" prefHeight="22.0" prefWidth="324.0" />
       <Label layoutX="14.0" layoutY="167.0" prefHeight="31.0" prefWidth="119.0" text="Электронная_Почта" />
+      <TextField fx:id="pasportNumber" layoutX="179.0" layoutY="234.0" prefHeight="22.0" prefWidth="324.0" />
+      <TextField fx:id="passportSeries" layoutX="179.0" layoutY="201.0" prefHeight="22.0" prefWidth="324.0" />
+      <TextField fx:id="idSubdivision" layoutX="179.0" layoutY="264.0" prefHeight="22.0" prefWidth="324.0" />
+      <TextField fx:id="issuedBy" layoutX="179.0" layoutY="297.0" prefHeight="22.0" prefWidth="324.0" />
+      <TextField fx:id="whenIssued" layoutX="179.0" layoutY="325.0" prefHeight="22.0" prefWidth="324.0" />
+      <Label layoutX="14.0" layoutY="260.0" prefHeight="31.0" prefWidth="119.0" text="Код_подразделения" />
+      <Label layoutX="14.0" layoutY="233.0" prefHeight="31.0" prefWidth="119.0" text="Номер_паспорта" />
+      <Label layoutX="14.0" layoutY="197.0" prefHeight="31.0" prefWidth="119.0" text="Серия_паспорта" />
+      <Label layoutX="14.0" layoutY="293.0" prefHeight="31.0" prefWidth="119.0" text="Кем_выдан" />
+      <Label layoutX="14.0" layoutY="321.0" prefHeight="31.0" prefWidth="119.0" text="Когда_выдан" />
     </children>
 </Pane>

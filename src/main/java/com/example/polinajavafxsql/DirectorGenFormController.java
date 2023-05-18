@@ -12,27 +12,34 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.net.URL;
 import java.sql.Connection;
+import java.util.ResourceBundle;
 import java.util.stream.Collectors;
 
-public class AdministratorFindTeacherController {
+public class DirectorGenFormController {
     @FXML
     private Button button;
 
     @FXML
-    private TextField fio;
+    private TextField gen;
+
 
     private Connection connection;
     private ObservableList<Employee> employeeList;
+
+
+
     @FXML
     void send(ActionEvent event) throws IOException {
         connection = ConnectionDb.connectingToDatabase();
         employeeList = DataEntityFromDb.getInfoEmployeeFromDb(connection);
         AdministratorEmployeController.changeListEmploye(employeeList.stream().filter(e ->
-                        e.getFio().equals(fio.getText()) && e.getIdPosition() == 3)
+                        e.getGen().equals(gen.getText()))
                 .collect(Collectors.toCollection(FXCollections::observableArrayList)));
         button.getScene().getWindow().hide();
         Parent root = FXMLLoader.load(getClass().getResource("administrator/employeeTable.fxml"));
@@ -40,5 +47,7 @@ public class AdministratorFindTeacherController {
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+
     }
+
 }

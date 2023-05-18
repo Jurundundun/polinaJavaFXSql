@@ -18,6 +18,6 @@
       <TextField fx:id="idService" layoutX="132.0" layoutY="55.0" prefHeight="22.0" prefWidth="324.0" />
       <TextField fx:id="data" layoutX="132.0" layoutY="85.0" prefHeight="22.0" prefWidth="324.0" />
       <TextField fx:id="idContract" layoutX="132.0" layoutY="116.0" prefHeight="22.0" prefWidth="324.0" />
-      <TextField fx:id="idEmployee" layoutX="132.0" layoutY="143.0" prefHeight="22.0" prefWidth="324.0" />
+      <TextField fx:id="idClient" layoutX="132.0" layoutY="143.0" prefHeight="22.0" prefWidth="324.0" />
     </children>
 </Pane>

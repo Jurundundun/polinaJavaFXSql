@@ -4,18 +4,24 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="406.0" prefWidth="634.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.polinajavafxsql.AdministratorEmployeController">
+<AnchorPane prefHeight="406.0" prefWidth="584.0" xmlns="http://javafx.com/javafx/19"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.polinajavafxsql.AdministratorEmployeController">
     <children>
-        <TableView fx:id="employeeTable" layoutX="-1.0" prefHeight="406.0" prefWidth="1095.0">
+        <TableView fx:id="employeeTable" prefHeight="406.0" prefWidth="1278.0">
             <columns>
-                <TableColumn fx:id="id" prefWidth="108.0" text="Код_Сотрудника" />
-                <TableColumn fx:id="fio" prefWidth="170.0" text="ФИО" />
-                <TableColumn fx:id="birthDate" prefWidth="132.0" text="Дата_рождения" />
-                <TableColumn fx:id="gen" minWidth="0.0" prefWidth="124.0" text="Пол" />
-                <TableColumn fx:id="phoneNumber" prefWidth="141.0" text="Номер_телефона" />
-            <TableColumn fx:id="email" prefWidth="151.0" text="Электронная_почта" />
-            <TableColumn fx:id="idOrganization" prefWidth="121.0" text="Код_Организации" />
-            <TableColumn fx:id="idPosition" prefWidth="147.0" text="Код_Должности" />
+                <TableColumn fx:id="id" prefWidth="101.0" text="Код_Сотрудника" />
+                <TableColumn fx:id="fio" prefWidth="68.0" text="ФИО" />
+                <TableColumn fx:id="birthDate" prefWidth="109.0" text="Дата_рождения" />
+                <TableColumn fx:id="gen" minWidth="0.0" prefWidth="39.0" text="Пол" />
+                <TableColumn fx:id="phoneNumber" prefWidth="126.0" text="Номер_телефона" />
+            <TableColumn fx:id="email" prefWidth="136.0" text="Электронная_почта" />
+            <TableColumn fx:id="data" prefWidth="56.0" text="Дата" />
+            <TableColumn fx:id="nameOfCourse" prefWidth="136.0" text="Наименование_курса" />
+            <TableColumn fx:id="passportSeries" prefWidth="104.0" text="Серия_паспорта" />
+            <TableColumn fx:id="pasportNumber" prefWidth="108.0" text="Номер_паспорта" />
+            <TableColumn fx:id="idSubdivision" prefWidth="129.0" text="Код_подразделения" />
+            <TableColumn fx:id="issuedBy" prefWidth="73.0" text="Кем_выдан" />
+            <TableColumn fx:id="whenIssued" prefWidth="95.0" text="Когда_выдан" />
             </columns>
         </TableView>
     </children>

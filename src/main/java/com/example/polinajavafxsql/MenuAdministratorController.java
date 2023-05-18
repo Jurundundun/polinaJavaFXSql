@@ -145,6 +145,7 @@ public class MenuAdministratorController {
 
     @FXML
     void getListOfStudents(ActionEvent event) throws IOException {
+        //заменить на кол-во учеников(одна цифра)
         Parent root = FXMLLoader.load(getClass().getResource("teacher/infoClient.fxml"));
         Stage stage = new Stage();
         Scene scene = new Scene(root);

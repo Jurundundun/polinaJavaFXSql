@@ -35,6 +35,21 @@ public class AdministratorClientFormController {
 
     @FXML
     private TextField phoneNumber;
+    @FXML
+    private TextField idSubdivision;
+
+    @FXML
+    private TextField issuedBy;
+
+    @FXML
+    private TextField pasportNumber;
+
+    @FXML
+    private TextField passportSeries;
+
+
+    @FXML
+    private TextField whenIssued;
 
     private Connection connection;
     private Client client;
@@ -43,16 +58,23 @@ public class AdministratorClientFormController {
     void send(ActionEvent event) throws SQLException {
         client = new Client(
             LocalDate.parse(birthDateChild.getText()),
-                email.getText(),
-                fioChild.getText(),
-                fioParent.getText(),
-                Integer.parseInt(id.getText()),
-                phoneNumber.getText()
+            email.getText(),
+            fioChild.getText(),
+            fioParent.getText(),
+            Integer.parseInt(id.getText()),
+            phoneNumber.getText(),
+            idSubdivision.getText(),
+            issuedBy.getText(),
+            Integer.parseInt(pasportNumber.getText()),
+            Integer.parseInt(passportSeries.getText()),
+            LocalDate.parse(whenIssued.getText())
+
 
 
         );
         connection = ConnectionDb.connectingToDatabase();
         InsertEntityInDb.insertClientInDb(connection, client);
+        InsertEntityInDb.insertPDKInDb(connection, client);
         button.getScene().getWindow().hide();
     }
 }

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="223.0" prefWidth="219.0"
+            xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.polinajavafxsql.AdministratorEmployeController">
+   <children>
+      <TableView fx:id="tableCount" prefHeight="287.0" prefWidth="306.0">
+        <columns>
+          <TableColumn fx:id="countClient" prefWidth="305.0" text="Количество_клиентов" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

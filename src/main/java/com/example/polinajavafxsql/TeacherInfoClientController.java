@@ -37,6 +37,39 @@ public class TeacherInfoClientController implements Initializable {
 
     @FXML
     private TableView<Client> tableClient;
+
+    @FXML
+    private TableColumn<Client, LocalDate> dataContract;
+
+    @FXML
+    private TableColumn<Client, LocalDate> dateOfPayment;
+
+
+    @FXML
+    private TableColumn<Client, Integer> idContract;
+
+    @FXML
+    private TableColumn<Client, Integer> idReciept;
+
+    @FXML
+    private TableColumn<Client, String> idSubdivision;
+
+    @FXML
+    private TableColumn<Client, String> issuedBy;
+
+    @FXML
+    private TableColumn<Client, Integer> pasportNumber;
+
+    @FXML
+    private TableColumn<Client, Integer> passportSeries;
+
+
+    @FXML
+    private TableColumn<Client, String> review;
+
+
+    @FXML
+    private TableColumn<Client, LocalDate> whenIssued;
     private ObservableList<Client> clientList;
     private Connection connection;
     @Override
@@ -47,6 +80,16 @@ public class TeacherInfoClientController implements Initializable {
         fioChild.setCellValueFactory(new PropertyValueFactory<>("fioChild"));
         fioParent.setCellValueFactory(new PropertyValueFactory<>("fioParent"));
         phoneNumber.setCellValueFactory(new PropertyValueFactory<>("phoneNumber"));
+        dataContract.setCellValueFactory(new PropertyValueFactory<>("dataContract"));
+        dateOfPayment.setCellValueFactory(new PropertyValueFactory<>("dateOfPayment"));
+        idContract.setCellValueFactory(new PropertyValueFactory<>("idContract"));
+        idReciept.setCellValueFactory(new PropertyValueFactory<>("idReciept"));
+        idSubdivision.setCellValueFactory(new PropertyValueFactory<>("idSubdivision"));
+        issuedBy.setCellValueFactory(new PropertyValueFactory<>("issuedBy"));
+        pasportNumber.setCellValueFactory(new PropertyValueFactory<>("pasportNumber"));
+        passportSeries.setCellValueFactory(new PropertyValueFactory<>("passportSeries"));
+        review.setCellValueFactory(new PropertyValueFactory<>("review"));
+        whenIssued.setCellValueFactory(new PropertyValueFactory<>("whenIssued"));
 
 
         connection = ConnectionDb.connectingToDatabase();

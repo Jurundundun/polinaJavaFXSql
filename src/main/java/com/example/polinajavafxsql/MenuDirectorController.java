@@ -2,6 +2,7 @@ package com.example.polinajavafxsql;
 
 import com.example.polinajavafxsql.entity.Client;
 import com.example.polinajavafxsql.entity.Contract;
+import com.example.polinajavafxsql.entity.Employee;
 import com.example.polinajavafxsql.jdbc.ConnectionDb;
 import com.example.polinajavafxsql.jdbc.DataEntityFromDb;
 import javafx.collections.FXCollections;
@@ -70,7 +71,16 @@ public class MenuDirectorController {
 
     @FXML
     void getClientsQulificationYear(ActionEvent event) throws IOException {
-
+        Connection connection = ConnectionDb.connectingToDatabase();
+        ObservableList<Employee> employeeList = DataEntityFromDb.getInfoEmployeeFromDb(connection);
+        AdministratorEmployeController.changeListEmploye(employeeList.stream().filter(e ->
+                        e.getData().getYear() == 2023)
+                .collect(Collectors.toCollection(FXCollections::observableArrayList)));
+        Parent root = FXMLLoader.load(getClass().getResource("administrator/employeeTable.fxml"));
+        Stage stage = new Stage();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 
     @FXML
@@ -100,7 +110,7 @@ public class MenuDirectorController {
 
     @FXML
     void getFormOfRegistration(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("administrator/clientForm.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("director/employeeForm.fxml"));
         Stage stage = new Stage();
         Scene scene = new Scene(root);
         stage.setScene(scene);
@@ -109,7 +119,7 @@ public class MenuDirectorController {
 
     @FXML
     void getFormServices(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("teacher/serviceClient.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("director/serviceForm.fxml"));
         Stage stage = new Stage();
         Scene scene = new Scene(root);
         stage.setScene(scene);
@@ -141,8 +151,12 @@ public class MenuDirectorController {
     }
 
     @FXML
-    void getListOfEmploye(ActionEvent event) {
-
+    void getListOfEmploye(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("administrator/employeeTable.fxml"));
+        Stage stage = new Stage();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 
     @FXML
@@ -155,8 +169,12 @@ public class MenuDirectorController {
     }
 
     @FXML
-    void getListOfqualification(ActionEvent event) {
-
+    void getListOfqualification(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("administrator/employeeTable.fxml"));
+        Stage stage = new Stage();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 
     @FXML
@@ -178,8 +196,12 @@ public class MenuDirectorController {
     }
 
     @FXML
-    void getNumberOfclasses(ActionEvent event) {
-
+    void getNumberOfclasses(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("director/intervalDateForm.fxml"));
+        Stage stage = new Stage();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 
     @FXML
@@ -191,16 +213,24 @@ public class MenuDirectorController {
         stage.show();
     }
     @FXML
-    void getListOfEmployeByGend(ActionEvent event) {
-
+    void getListOfEmployeByGend(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("director/genForm.fxml"));
+        Stage stage = new Stage();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
     @FXML
-    void getServiceByCondition(ActionEvent event) {
+    void getServiceByCondition(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("director/priceForm.fxml"));
+        Stage stage = new Stage();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
 
     }
 
     @FXML
-    void getTimetableOfEmploye(ActionEvent event) {
-
+    void getTimetableOfEmploye(ActionEvent event) throws IOException {
     }
 }

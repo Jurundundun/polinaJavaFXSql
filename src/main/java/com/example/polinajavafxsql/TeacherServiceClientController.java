@@ -1,5 +1,6 @@
 package com.example.polinajavafxsql;
 
+import com.example.polinajavafxsql.entity.Contract;
 import com.example.polinajavafxsql.entity.Service;
 import com.example.polinajavafxsql.jdbc.ConnectionDb;
 import com.example.polinajavafxsql.jdbc.DataEntityFromDb;
@@ -30,8 +31,13 @@ public class TeacherServiceClientController implements Initializable {
     @FXML
     private TableView<Service> tableServices;
 
-    private ObservableList<Service> serviceList;
+    private static ObservableList<Service> serviceList;
     private Connection connection;
+    private static int pass;
+    public static void changeListService(ObservableList<Service> newServiceList){
+        serviceList = newServiceList;
+        pass = 1;
+    }
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         id.setCellValueFactory(new PropertyValueFactory<Service, Integer>("id"));
@@ -40,7 +46,11 @@ public class TeacherServiceClientController implements Initializable {
         price.setCellValueFactory(new PropertyValueFactory<Service, String>("price"));
 
         connection = ConnectionDb.connectingToDatabase();
-        serviceList = DataEntityFromDb.getServiceFromDb(connection);
+        if(pass == 1){
+            pass = 0;
+        }else {
+            serviceList = DataEntityFromDb.getServiceFromDb(connection);
+        }
         tableServices.setItems(serviceList);
     }
 }

@@ -51,6 +51,69 @@ public class InsertEntityInDb {
         preparedStatement.setString(6,client.getEmail());
 
         preparedStatement.execute();
+    }
+    public static void insertEmployeeInDb(Connection connection, Employee employee) throws SQLException {
+        connection = ConnectionDb.connectingToDatabase();
+        String query = "INSERT INTO " +
+                "Сотрудники(Код_Сотрудника,ФИО,Дата_рождения,Пол,Номер_телефона,Электронная_почта,Код_Организации,Код_Должности) " +
+                "VALUES(?,?,?,?,?,?,?,?) ";
+        PreparedStatement preparedStatement = connection.prepareStatement(query);
+        preparedStatement.setInt(1,employee.getId());
+        preparedStatement.setString(2,employee.getFio());
+        preparedStatement.setDate(3,Date.valueOf(employee.getBirthDate()));
+        preparedStatement.setString(4,employee.getGen());
+        preparedStatement.setString(5,employee.getPhoneNumber());
+        preparedStatement.setString(6,employee.getEmail());
+        preparedStatement.setInt(7,employee.getIdOrganization());
+        preparedStatement.setInt(8,employee.getIdPosition());
+
+        preparedStatement.execute();
+    }
+    public static void insertServiceInDb(Connection connection, Service service) throws SQLException {
+        connection = ConnectionDb.connectingToDatabase();
+        String query = "INSERT INTO " +
+                "Услуги(Код_услуги,Наименование,Цена,Код_организации) " +
+                "VALUES(?,?,?,?) ";
+        PreparedStatement preparedStatement = connection.prepareStatement(query);
+        preparedStatement.setInt(1,service.getId());
+        preparedStatement.setString(2,service.getName());
+        preparedStatement.setDouble(3,Double.parseDouble(service.getPrice()));
+        preparedStatement.setInt(4,service.getIdOrganization());
+
+        preparedStatement.execute();
+    }
+    public static void insertPDSInDb(Connection connection, Employee employee) throws SQLException {
+        connection = ConnectionDb.connectingToDatabase();
+        String query = "insert into " +
+                "ПДС(Код_клиента,ФИО,Серия_паспорта,Номер_паспорта,Код_подразделения,Кем_выдан,Когда_выдан)" +
+                "VALUES(?,?,?,?,?,?,?) ";
+        PreparedStatement preparedStatement = connection.prepareStatement(query);
+        preparedStatement.setInt(1, employee.getId());
+        preparedStatement.setString(2, employee.getFio());
+        preparedStatement.setInt(3, employee.getPassportSeries());
+        preparedStatement.setInt(4, employee.getPasportNumber());
+        preparedStatement.setString(5, employee.getIdSubdivision());
+        preparedStatement.setString(6, employee.getIssuedBy());
+        preparedStatement.setDate(7,Date.valueOf(employee.getWhenIssued()));
+
+        preparedStatement.execute();
+
+    }
+    public static void insertPDKInDb(Connection connection, Client client) throws SQLException {
+        connection = ConnectionDb.connectingToDatabase();
+        String query = "insert into " +
+                "ПДК(Код_клиента,ФИО,Серия_паспорта,Номер_паспорта,Код_подразделения,Кем_выдан,Когда_выдан)" +
+                "VALUES(?,?,?,?,?,?,?) ";
+        PreparedStatement preparedStatement = connection.prepareStatement(query);
+        preparedStatement.setInt(1,client.getId());
+        preparedStatement.setString(2,client.getFioParent());
+        preparedStatement.setInt(3,client.getPassportSeries());
+        preparedStatement.setInt(4,client.getPasportNumber());
+        preparedStatement.setString(5,client.getIdSubdivision());
+        preparedStatement.setString(6,client.getIssuedBy());
+        preparedStatement.setDate(7,Date.valueOf(client.getWhenIssued()));
+
+        preparedStatement.execute();
 
     }
     public static void insertContractInDb(Connection connection, Contract contract) throws SQLException {

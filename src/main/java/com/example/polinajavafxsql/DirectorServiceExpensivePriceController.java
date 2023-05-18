@@ -1,6 +1,6 @@
 package com.example.polinajavafxsql;
 
-import com.example.polinajavafxsql.entity.Employee;
+import com.example.polinajavafxsql.entity.Service;
 import com.example.polinajavafxsql.jdbc.ConnectionDb;
 import com.example.polinajavafxsql.jdbc.DataEntityFromDb;
 import javafx.collections.FXCollections;
@@ -18,27 +18,31 @@ import java.io.IOException;
 import java.sql.Connection;
 import java.util.stream.Collectors;
 
-public class AdministratorFindTeacherController {
+public class DirectorServiceExpensivePriceController {
     @FXML
     private Button button;
 
     @FXML
-    private TextField fio;
+    private TextField price;
 
     private Connection connection;
-    private ObservableList<Employee> employeeList;
+    private ObservableList<Service> serviceList;
+
+
+
     @FXML
     void send(ActionEvent event) throws IOException {
         connection = ConnectionDb.connectingToDatabase();
-        employeeList = DataEntityFromDb.getInfoEmployeeFromDb(connection);
-        AdministratorEmployeController.changeListEmploye(employeeList.stream().filter(e ->
-                        e.getFio().equals(fio.getText()) && e.getIdPosition() == 3)
+        serviceList = DataEntityFromDb.getServiceFromDb(connection);
+        TeacherServiceClientController.changeListService(serviceList.stream().filter(s ->
+                        Double.parseDouble(s.getPrice()) > Double.parseDouble(price.getText()))
                 .collect(Collectors.toCollection(FXCollections::observableArrayList)));
         button.getScene().getWindow().hide();
-        Parent root = FXMLLoader.load(getClass().getResource("administrator/employeeTable.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("teacher/serviceClient.fxml"));
         Stage stage = new Stage();
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+
     }
 }

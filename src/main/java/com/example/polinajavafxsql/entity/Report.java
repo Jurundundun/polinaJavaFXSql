@@ -1,8 +1,5 @@
 package com.example.polinajavafxsql.entity;
 
-import javafx.fxml.FXML;
-import javafx.scene.control.TextField;
-
 import java.time.LocalDate;
 
 public class Report {
@@ -15,6 +12,14 @@ public class Report {
 
     private int idContract;
 
+
+    public int getIdEmployee() {
+        return idEmployee;
+    }
+
+    public void setIdEmployee(int idEmployee) {
+        this.idEmployee = idEmployee;
+    }
 
     private int idEmployee;
 
@@ -45,13 +50,6 @@ public class Report {
         this.idContract = idContract;
     }
 
-    public int getIdEmployee() {
-        return idEmployee;
-    }
-
-    public void setIdEmployee(int idEmployee) {
-        this.idEmployee = idEmployee;
-    }
 
     public int getIdService() {
         return idService;

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="406.0" prefWidth="634.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.polinajavafxsql.DirectorDateReportController">
+    <children>
+        <TableView fx:id="reportTable" layoutX="-1.0" prefHeight="406.0" prefWidth="653.0">
+            <columns>
+                <TableColumn fx:id="id" prefWidth="108.0" text="Код_отчетности" />
+                <TableColumn fx:id="idService" prefWidth="170.0" text="Код_услуги" />
+                <TableColumn fx:id="data" prefWidth="132.0" text="Дата" />
+                <TableColumn fx:id="idContract" minWidth="0.0" prefWidth="124.0" text="Код_договора" />
+                <TableColumn fx:id="idEmployee" prefWidth="110.0" text="Код_сотрудника" />
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>

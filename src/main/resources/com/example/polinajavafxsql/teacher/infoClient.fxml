@@ -4,17 +4,26 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="406.0" prefWidth="412.0" xmlns="http://javafx.com/javafx/19"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.polinajavafxsql.TeacherInfoClientController">
+<AnchorPane prefHeight="406.0" prefWidth="1384.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.polinajavafxsql.TeacherInfoClientController">
     <children>
-        <TableView fx:id="tableClient" layoutX="-1.0" prefHeight="406.0" prefWidth="894.0">
+        <TableView fx:id="tableClient" prefHeight="406.0" prefWidth="1452.0">
             <columns>
-                <TableColumn fx:id="id" prefWidth="147.0" text="Код_клиента" />
-                <TableColumn fx:id="fioChild" minWidth="0.0" prefWidth="146.0" text="ФИО_ребенка" />
-                <TableColumn fx:id="fioParent" minWidth="0.0" prefWidth="196.0" text="ФИО_законного_представителя" />
-            <TableColumn fx:id="birthDateChild" prefWidth="182.0" text="Дата_рождения_ребенка" />
-            <TableColumn fx:id="phoneNumber" prefWidth="85.0" text="Телефон" />
-            <TableColumn fx:id="email" minWidth="0.0" prefWidth="137.0" text="Электронная_Почта" />
+                <TableColumn fx:id="id" prefWidth="89.0" text="Код_клиента" />
+                <TableColumn fx:id="fioChild" minWidth="0.0" prefWidth="54.0" text="ФИО_ребенка" />
+                <TableColumn fx:id="fioParent" minWidth="0.0" prefWidth="105.0" text="ФИО_законного_представителя" />
+            <TableColumn fx:id="birthDateChild" prefWidth="110.0" text="Дата_рождения_ребенка" />
+            <TableColumn fx:id="phoneNumber" prefWidth="68.0" text="Телефон" />
+            <TableColumn fx:id="email" minWidth="0.0" prefWidth="85.0" text="Электронная_Почта" />
+            <TableColumn fx:id="idContract" prefWidth="79.0" text="Код_договора" />
+            <TableColumn fx:id="dataContract" prefWidth="91.0" text="Дата_договора " />
+            <TableColumn fx:id="dateOfPayment" prefWidth="68.0" text="Дата_оплаты" />
+            <TableColumn fx:id="idReciept" prefWidth="86.0" text="Код_квитанции" />
+            <TableColumn fx:id="passportSeries" prefWidth="98.0" text="Серия_паспорта" />
+            <TableColumn fx:id="pasportNumber" prefWidth="77.0" text="Номер_паспорта" />
+            <TableColumn fx:id="idSubdivision" minWidth="6.0" prefWidth="63.0" text="Код_подразделения" />
+            <TableColumn fx:id="issuedBy" minWidth="0.0" prefWidth="100.0" text="Кем_выдан" />
+            <TableColumn fx:id="whenIssued" minWidth="0.0" prefWidth="72.0" text="Когда_выдан" />
+            <TableColumn fx:id="review" minWidth="0.0" prefWidth="90.0" text="Отзыв" />
             </columns>
         </TableView>
     </children>
